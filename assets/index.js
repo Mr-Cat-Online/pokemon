@@ -102,7 +102,7 @@ function reload() {
 }
 
 function correctAnswer() {
-  if (count < 25) {
+  if (count < 20) {
     $("#score-kepper").append("<td> <p class='right'> <i class='far fa-check-circle'></i> </p> </td>");
     score++;
     count++;
@@ -115,7 +115,7 @@ function correctAnswer() {
 }
 
 function wrongAnswer() {
-  if (count < 25) {
+  if (count < 20) {
     $("#score-kepper").append("<td> <p class='wrong'> <i class='far fa-times-circle'></i> </p> </td>");
     count++;
     console.log("count : " + count);
