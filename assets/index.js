@@ -41,30 +41,31 @@ function images() {
   onscreen.push(name_one);
 
   $("#image-one").attr("src", image_one);
-  console.log(one);
 
   image_two = "images/" + two + "-min.png";
   name_two = pokemon[two];
   onscreen.push(name_two);
 
   $("#image-two").attr("src", image_two);
-  console.log(two);
 
   image_three = "images/" + three + "-min.png";
   name_three = pokemon[three];
   onscreen.push(name_three);
 
   $("#image-three").attr("src", image_three);
-  console.log(three);
 
   image_four = "images/" + four + "-min.png";
   name_four = pokemon[four];
   onscreen.push(name_four);
 
   $("#image-four").attr("src", image_four);
-  console.log(four);
 
-  console.log(onscreen);
+  questionGenerator();
+
+}
+
+function questionGenerator() {
+
 
   winner_number = Math.round(Math.random() * 3);
   winner_name = onscreen[winner_number];
@@ -102,7 +103,7 @@ function reload() {
 }
 
 function correctAnswer() {
-  if (count < 20) {
+  if (count < 25) {
     $("#score-kepper").append("<td> <p class='right'> <i class='far fa-check-circle'></i> </p> </td>");
     score++;
     count++;
@@ -115,7 +116,7 @@ function correctAnswer() {
 }
 
 function wrongAnswer() {
-  if (count < 20) {
+  if (count < 25) {
     $("#score-kepper").append("<td> <p class='wrong'> <i class='far fa-times-circle'></i> </p> </td>");
     count++;
     console.log("count : " + count);
